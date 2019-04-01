@@ -134,7 +134,7 @@ $(document).on('focus', 'input, select', function () {
         if (preValue != postValue) {
             var id = $(this).closest('tr').attr('id');
             var updated = { name: $('#' + id).find('.bgname').val(), direction: $('#' + id).find('.bgsign').val() };
-            //updateBudget(id, updated);
+            updateBudget(id, updated);
         } else {
             $(this).attr('readonly',true);
         }
