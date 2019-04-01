@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Exp</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Бюджет</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/budget_group.html">Пера</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/loan">Заеми</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Репорт</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                Здрастии
+            </span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <p></p>
+        </div>
+        <div class="row">
+
+
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Име</th>
+                    <th>От/Към Бюджета</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <form onsubmit="addBudgetGroup(); return false;">
+                        <th> <input id="name" type="text" class="form-control col" required></th>
+                        <th> <select id="direction" class="form-control btn-danger">
+                                <option value="-">-</option>
+                                <option value="+">+</option>
+                            </select>
+                        </th>
+                        <th style="text-align:center;"><button type="button submit" class="btn btn-secondary"
+                                >Добави</button></th>
+                    </form>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="/budget_group.js"></script>
+</body>
+
+</html>
