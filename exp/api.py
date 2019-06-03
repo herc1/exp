@@ -8,6 +8,9 @@ from exp.resources.loan_group import LoanGroupCR
 from exp.resources.loan_group import LoanGroupUD
 from exp.resources.loan import LoanCR
 from exp.resources.loan import LoanUD
+from exp.resources.real import RealCR
+from exp.resources.real import RealUD
+from exp.resources.balance import Balance
 
 api_bp = Blueprint('api', __name__)
 api = Api(api_bp)
@@ -19,3 +22,6 @@ api.add_resource(LoanGroupCR, '/loan_group')
 api.add_resource(LoanGroupUD, '/loan_group/<id>')
 api.add_resource(LoanCR, '/loan')
 api.add_resource(LoanUD, '/loan/<id>')
+api.add_resource(RealCR, '/real')
+api.add_resource(RealUD, '/real/<id>')
+api.add_resource(Balance, '/balance')

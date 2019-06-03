@@ -15,6 +15,7 @@ $(document).ready(function () {
 
 $(document).on('focus', 'input, select', function () {
     $(this).removeAttr('readonly');
+    console.log('test');
     var preValue = $(this).val();
     $(this).focusout(function () {
         var postValue = $(this).val();
@@ -34,7 +35,7 @@ function fillTableRow(response) {
         $('tbody').prepend(`<tr id="` + element.id + `">
         <td><input type="text" class="form-control col bgname" readonly value="`+ element.name + `"></td>
         <td>
-        <select id="direction" class="form-control bgsign `+ (element.direction == '+' ? 'btn-success' : 'btn-danger') + `" readonly>` +
+        <select id="direction" class="form-control bgsign `+ (element.direction == '+' ? 'btn-success' : 'btn-danger') + `">` +
             (element.direction == '+' ? '<option value="+">+</option><option value="-">-</option>' : '<option value="-">-</option><option value="+">+</option>') + ` 
         </select>
         </td>

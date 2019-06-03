@@ -13,6 +13,7 @@ class User(db.Model):
     budget = db.relationship('Budget', backref='user', lazy=True)
     loan_groups = db.relationship('Loan_group', backref='user', lazy=True)
     loan = db.relationship('Loan', backref='user', lazy=True)
+    real = db.relationship('Real', backref='user', lazy=True)
 
     # def __repr__(self):
     #    return '<User %r>' % self.username
@@ -54,5 +55,11 @@ class Loan(db.Model):
     loan_group_id = db.Column(db.Integer, db.ForeignKey(
         'loan_group.id'), nullable=False)
     date = db.Column(db.DateTime, nullable=False)
+    name = db.Column(db.String(255), nullable=False)
+    amount = db.Column(db.Float, nullable=False)
+
+class Real(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     name = db.Column(db.String(255), nullable=False)
     amount = db.Column(db.Float, nullable=False)

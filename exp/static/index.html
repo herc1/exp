@@ -41,13 +41,32 @@
     <div class="row">
       <p></p>
     </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th colspan="3" style='text-align: center;'>Реалност</th>
+        </tr>
+        <tr>
+          <form onsubmit="addReal(); return false;">
+            <th> <input id='rName' type="text" aria-label="Name" class="form-control col" required placeholder="Име">
+            </th>
+            <th> <input id='rAmount' type="number" aria-label="amount" class="form-control col" step="0.01" required
+                placeholder="Сума"> </th>
+            <th style="text-align:center;"><button type="button submit" class="btn btn-secondary">Добави</button></th>
+          </form>
+        </tr>
+      </thead>
+      <tbody id="real">
+      </tbody>
+    </table>
     <div class="row">
-
-
     </div>
 
     <table class="table table-striped">
       <thead>
+        <tr>
+          <th colspan="5" style='text-align: center;'>Бюджет</th>
+        </tr>
         <tr>
           <th>Дата</th>
           <th>Име</th>
@@ -60,12 +79,13 @@
             <th> <input id='date' type="date" aria-label="Date" class="form-control col"></th>
             <th> <input id='name' type="text" aria-label="Name" class="form-control col" required></th>
             <th id='catCol'></th>
-            <th> <input id='amount' type="number" aria-label="amount" class="form-control col" step="0.01" required></th>
-            <th><button type="button submit" class="btn btn-secondary">Добави</button></th>
+            <th> <input id='amount' type="number" aria-label="amount" class="form-control col" step="0.01" required>
+            </th>
+            <th style="text-align:center;"><button type="button submit" class="btn btn-secondary">Добави</button></th>
           </form>
         </tr>
       </thead>
-      <tbody>
+      <tbody id='budget'>
       </tbody>
     </table>
   </div>
